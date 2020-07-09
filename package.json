@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "npm run serve",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build:prod": "cross-env APP_ENV=prod NODE_ENV=production vue-cli-service build",
+    "build:dev": "cross-env APP_ENV=dev NODE_ENV=development vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -17,6 +19,7 @@
     "@vue/cli-plugin-router": "^4.4.0",
     "@vue/cli-plugin-vuex": "^4.4.0",
     "@vue/cli-service": "^4.4.0",
+    "cross-env": "^7.0.2",
     "vue-template-compiler": "^2.6.11"
   }
 }
